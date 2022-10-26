@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    background-image: linear-gradient(to right, #536976 , #292E49 );
+    
+    font-family: "Fuzzy Bubbles" , sans-serif;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.player-container{
+    /* background-image: linear-gradient(to right, #536976 , #292E49 ); */
+
+    /* height: 450px; */
+    /* min-width: 300px; */
+    width: 400px;
+
+    box-shadow: 0 10px 30px 0px #143142;
+    border-radius: 0.75em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    /* border: 2px solid white; */
+    padding: 50px 10px;
+
+}
+
+button{
+    background: none;
+    border: none;
+    color: white;
+}
+
+.art-container{
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgb(205, 180, 180);
+    transform: rotate(0deg);
+    animation: rotate 6s linear infinite;
+    animation-play-state: paused;
+}
+/* animation-play-state: running; */
+
+.art-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:  rotate(360deg);
+    }
+}
+
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#track-title{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#track-artist{
+    font-size: 1em;
+    text-align: center;
+}
+
+.controller-container{
+    display: flex;
+    gap: 1.25em;
+    margin: 0.5em 0em;
+}
+.controller-btn{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#play-btn{
+    font-size: 2.25em;
+    padding: 0px 15px;
+}
+
+.duration-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 0.75em;
+    font-size: 1em;
+}
+
+.volume-container{
+    display: flex;
+    gap: 1em;
+}
+.vol-btn{
+    font-size: 1em;
+}
+.vol-icon{
+    cursor: pointer;
+}
+
+input[type="range"]{
+    border-radius: 0.5em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    opacity: 0;
+}

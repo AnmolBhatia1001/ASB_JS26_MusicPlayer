@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="player-container">
+        <!-- art -->
+        <div class="art-container">
+            <img src="./asset/art.jpg" alt="">
+        </div>
+
+        <!-- title -->
+        <div class="title-container">
+            <h3 id="track-title">I guess</h3>
+            <h5 id="track-artist">by Kr$na</h5>
+        </div>
+
+        <!-- music controller -->
+        <div class="controller-container">
+
+            <button class="controller-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play-btn" class="controller-btn">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button class="controller-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+        <!-- duration -->
+        <div class="duration-container">
+            <span id="current-duration">00:00</span>
+            <input id="duration-timeline" type="range" min="0" max="100" value="0">
+            <span id="total-duration">00:00</span>
+        </div>
+
+        <!-- volume controller -->
+        <div class="volume-container">
+            <button class="vol-btn"">
+                <i class="fa-solid fa-volume-low vol-icon"></i>
+            </button>
+
+            <input id="vol-timeline" type="range" min="0" max="100" value="0">
+
+            <button class="vol-btn">
+                <i class="fa-solid fa-volume-high vol-icon"></i>
+            </button>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
+
+
