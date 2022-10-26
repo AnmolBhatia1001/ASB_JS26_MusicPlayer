@@ -30,19 +30,25 @@ function togglePlayPause(){
 }
 
 // volume controller events
+let currentVol = volTimeline.value
+
 function volController(){
     audioElement.volume = volTimeline.value /100;
+    currentVol = audioElement.volume * 100
 }
 
 function low(){
-    volTimeline.value = volTimeline.value - 5
-    audioElement.volume = volTimeline.value /100
+    currentVol = currentVol - 5
+    volTimeline.value = currentVol
+    audioElement.volume = currentVol /100
+    console.log(currentVol);
 }
 
 function high(){
-    volTimeline.value = volTimeline.value + 5
-    audioElement.volume = volTimeline.value /100
-    console.log(volTimeline.value);
+    ((currentVol + 5) > 100) ? currentVol = 100 : currentVol = currentVol + 5 ;
+    volTimeline.value = currentVol
+    audioElement.volume = currentVol /100
+    console.log(currentVol);
 }
 
 
