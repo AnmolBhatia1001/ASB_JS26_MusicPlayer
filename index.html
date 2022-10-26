@@ -49,13 +49,13 @@
 
         <!-- volume controller -->
         <div class="volume-container">
-            <button class="vol-btn">
+            <button class="vol-btn" onclick="low()">
                 <i class="fa-solid fa-volume-low vol-icon"></i>
             </button>
 
-            <input id="vol-timeline" type="range" min="0" max="100" value="0">
+            <input id="vol-timeline" oninput="volController()" type="range" min="0" max="100" value="100">
 
-            <button class="vol-btn">
+            <button class="vol-btn" onclick="high()">
                 <i class="fa-solid fa-volume-high vol-icon"></i>
             </button>
         </div>

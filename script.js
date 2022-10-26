@@ -11,19 +11,39 @@ const durationTimeline = document.getElementById("duration-timeline");
 const totalDuration = document.getElementById("total-duration");
 
 function play(){
-    // volTimeline.value = (audioElement.volume)*100
+    togglePlayPause()
+}
+
+function togglePlayPause(){
+        let iconPlayPause = playBtn.querySelectorAll("i")[0];
     if(playBtn.classList.contains("played")){
         playBtn.classList.remove("played")
-        playBtn.querySelectorAll("i")[0].classList.remove("fa-pause")
-        playBtn.querySelectorAll("i")[0].classList.add("fa-play")
+        iconPlayPause.classList.remove("fa-pause")
+        iconPlayPause.classList.add("fa-play")
         audioElement.pause()
     }else{
         playBtn.classList.add("played")
-        playBtn.querySelectorAll("i")[0].classList.remove("fa-play")
-        playBtn.querySelectorAll("i")[0].classList.add("fa-pause")
+        iconPlayPause.classList.remove("fa-play")
+        iconPlayPause.classList.add("fa-pause")
         audioElement.play()
     }
-    console.log(audioElement.volume);
 }
+
+// volume controller events
+function volController(){
+    audioElement.volume = volTimeline.value /100;
+}
+
+function low(){
+    volTimeline.value = volTimeline.value - 5
+    audioElement.volume = volTimeline.value /100
+}
+
+function high(){
+    volTimeline.value = volTimeline.value + 5
+    audioElement.volume = volTimeline.value /100
+    console.log(volTimeline.value);
+}
+
 
 playBtn.addEventListener("click",play)
