@@ -19,8 +19,8 @@
 
         <!-- title -->
         <div class="title-container">
-            <h3 id="track-title">I guess</h3>
-            <h5 id="track-artist">by Kr$na</h5>
+            <h3 id="track-title">think about it (Lofi)</h3>
+            <h5 id="track-artist">by ASB</h5>
         </div>
 
         <!-- music controller -->
@@ -43,7 +43,7 @@
         <!-- duration -->
         <div class="duration-container">
             <span id="current-duration">00:00</span>
-            <input id="duration-timeline" type="range" min="0" max="100" value="0">
+            <input id="duration-timeline" oninput="jumpToTime()" type="range" min="0" max="100" value="0">
             <span id="total-duration">00:00</span>
         </div>
 
@@ -60,7 +60,7 @@
             </button>
         </div>
 
-        <audio id="audioEle" src="./asset/lofi.mp3 " type="audio/mpeg" hidden></audio>
+        <audio id="audioEle" src="./asset/lofi.mp3 " type="audio/mpeg" loop hidden></audio>
 
 
     </div>
